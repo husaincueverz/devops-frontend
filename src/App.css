@@ -1,0 +1,90 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Adjust based on your preference */
+  gap: 20px;
+  width: 80%;
+  max-width: 1200px;
+}
+
+.list-container,
+.form-container {
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+h2 {
+  font-weight: 700;
+}
+
+input[type="text"], textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  resize: none; /* Prevents users from resizing the textarea */
+}
+
+textarea {
+  min-height: 100px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .list-container, .form-container {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+}
+
+.list-container ul, .form-container form {
+  list-style-type: none;
+  padding: 0;
+}
+
+.list-container li, .form-container div {
+  margin-bottom: 10px;
+}
+
+
+@media (max-width: 768px) {
+  .container {
+      grid-template-columns: 1fr; /* Stack items vertically on smaller screens */
+  }
+}
